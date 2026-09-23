@@ -1,0 +1,1262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #16834b;
+    --verde-escuro: #092f20;
+    --verde-claro: #e9f8ef;
+    --laranja: #e26b35;
+    --branco: #ffffff;
+    --fundo: #f5f8f6;
+    --texto: #17251e;
+    --cinza: #657069;
+    --borda: #dfe8e2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    transition: 0.3s;
+}
+
+body.dark {
+    --fundo: #0b1510;
+    --texto: #edf7f0;
+    --branco: #111d16;
+    --cinza: #b5c4ba;
+    --borda: #26392d;
+    --verde-claro: #14291d;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #ffffff44;
+
+    transition: 0.3s;
+}
+
+body.dark header {
+    background: rgba(9,20,14,0.92);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--texto);
+}
+
+.logo span {
+    color: var(--verde);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--verde);
+}
+
+.tema {
+    border: none;
+    background: var(--verde-claro);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+
+    padding: 150px 8% 90px;
+
+    background:
+        radial-gradient(circle at 80% 30%, #9ee4b933, transparent 30%),
+        linear-gradient(135deg, #e9f8ef, #fff8f2);
+}
+
+body.dark .hero {
+    background:
+        radial-gradient(circle at 80% 30%, #16834b22, transparent 30%),
+        #0b1510;
+}
+
+.hero-texto {
+    max-width: 700px;
+}
+
+.tag,
+.small-title {
+    color: var(--verde);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background: #ffffffaa;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 0.98;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--verde);
+}
+
+.hero p {
+    max-width: 650px;
+    color: var(--cinza);
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.25s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.principal {
+    background: var(--verde);
+    color: white;
+}
+
+.secundario {
+    border: 2px solid var(--verde);
+    color: var(--verde);
+    background: transparent;
+}
+
+.hero-lab {
+    width: 430px;
+    height: 430px;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle, #ffffff55, transparent 50%),
+        linear-gradient(135deg, var(--verde), #76d59f);
+
+    box-shadow:
+        0 30px 80px #16834b55;
+
+    animation: flutuar 5s infinite ease-in-out;
+}
+
+.lab-icon {
+    font-size: 150px;
+    filter: drop-shadow(0 15px 15px #0004);
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.7;
+}
+
+.orb1 {
+    width: 15px;
+    height: 15px;
+    top: 70px;
+    left: 70px;
+}
+
+.orb2 {
+    width: 25px;
+    height: 25px;
+    right: 60px;
+    bottom: 100px;
+}
+
+.mini-card {
+    position: absolute;
+    background: white;
+    color: var(--texto);
+    padding: 13px 18px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #0002;
+    font-weight: bold;
+}
+
+.card-top {
+    top: 80px;
+    right: -20px;
+}
+
+.card-bottom {
+    bottom: 80px;
+    left: -25px;
+}
+
+@keyframes flutuar {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* =========================
+   NÚMEROS
+========================= */
+
+.numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--verde-escuro);
+    color: white;
+}
+
+.numero {
+    padding: 35px;
+    text-align: center;
+    border-right: 1px solid #ffffff18;
+}
+
+.numero strong {
+    display: block;
+    font-size: 35px;
+    color: #79dca5;
+}
+
+.numero span {
+    color: #bcd0c4;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    padding: 110px 8%;
+}
+
+.section-header {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin: 12px 0;
+}
+
+.section-header h2 span {
+    color: var(--verde);
+}
+
+.section-header p {
+    color: var(--cinza);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.light {
+    color: white;
+}
+
+.light p {
+    color: #cce0d3;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    background: var(--branco);
+}
+
+.sobre-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-texto p {
+    color: var(--cinza);
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.sobre-destaque {
+    padding: 45px;
+    border-radius: 25px;
+    background: var(--verde-claro);
+    border: 1px solid var(--borda);
+}
+
+.destaque-icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.sobre-destaque h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.sobre-destaque p {
+    color: var(--cinza);
+    line-height: 1.7;
+}
+
+
+/* =========================
+   OBJETIVOS
+========================= */
+
+.objetivos {
+    background: var(--fundo);
+}
+
+.objetivos-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.objetivo {
+    padding: 30px;
+    background: var(--branco);
+    border-radius: 18px;
+    border: 1px solid var(--borda);
+    transition: 0.3s;
+}
+
+.objetivo:hover {
+    transform: translateY(-8px);
+    border-color: var(--verde);
+}
+
+.objetivo span {
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.objetivo h3 {
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.objetivo p {
+    color: var(--cinza);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HISTÓRIA
+========================= */
+
+.historia {
+    background: var(--branco);
+}
+
+.timeline {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 110px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--verde);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.timeline-date {
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--verde);
+    text-align: right;
+}
+
+.timeline-content {
+    position: relative;
+    padding: 25px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background: var(--fundo);
+}
+
+.timeline-content::before {
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    background: var(--verde);
+    border: 4px solid var(--branco);
+    border-radius: 50%;
+}
+
+.timeline-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: var(--cinza);
+    line-height: 1.7;
+}
+
+.timeline-content span {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--verde);
+    font-weight: bold;
+}
+
+
+/* =========================
+   CIENTISTAS
+========================= */
+
+.cientistas {
+    background: var(--fundo);
+}
+
+.cientistas-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cientista-card {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.cientista-card:hover {
+    transform: translateY(-10px);
+}
+
+.cientista-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    background: var(--verde-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.cientista-area {
+    color: var(--laranja);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cientista-card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.cientista-card p {
+    color: var(--cinza);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cientista-card button {
+    background: transparent;
+    border: none;
+    color: var(--verde);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info-cientista {
+    max-width: 800px;
+    margin: 35px auto 0;
+}
+
+
+/* =========================
+   ECOLAB
+========================= */
+
+.ecolab {
+    background:
+        radial-gradient(circle at 20% 20%, #2fba7144, transparent 25%),
+        linear-gradient(135deg, #092f20, #16834b);
+    color: white;
+}
+
+.ecolab-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ecolab-card {
+    position: relative;
+
+    padding: 35px;
+
+    border: 1px solid #ffffff22;
+    background: #ffffff0d;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.ecolab-card:hover {
+    transform: translateY(-7px);
+    background: #ffffff16;
+}
+
+.ecolab-number {
+    color: #86e0ac;
+    font-weight: bold;
+}
+
+.ecolab-icon {
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.ecolab-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.ecolab-card p {
+    color: #cce4d5;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ESCOLA
+========================= */
+
+.escola {
+    background: var(--branco);
+}
+
+.escola-intro {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+
+    padding: 45px;
+
+    background: var(--verde-claro);
+    border-radius: 25px;
+}
+
+.escola-symbol {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 70px;
+
+    background: var(--branco);
+}
+
+.escola-intro h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.escola-intro p {
+    color: var(--cinza);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.valores-grid {
+    max-width: 1000px;
+    margin: 35px auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.valor {
+    padding: 25px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+}
+
+.valor span {
+    font-size: 35px;
+}
+
+.valor h3 {
+    margin: 15px 0 10px;
+}
+
+.valor p {
+    color: var(--cinza);
+    line-height: 1.5;
+}
+
+.aviso-escola {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px;
+    border-left: 5px solid var(--laranja);
+    background: #fff4ec;
+}
+
+body.dark .aviso-escola {
+    background: #2a1d16;
+}
+
+.aviso-escola strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.aviso-escola p {
+    color: var(--cinza);
+}
+
+
+/* =========================
+   CURSO
+========================= */
+
+.curso {
+    background: var(--fundo);
+}
+
+.curso-progress {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    position: relative;
+}
+
+.progress-line {
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: var(--verde);
+}
+
+.curso-etapa {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.curso-bolinha {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--branco);
+    border: 3px solid var(--verde);
+
+    color: var(--verde);
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.curso-etapa h3 {
+    margin-bottom: 8px;
+}
+
+.curso-etapa p {
+    color: var(--cinza);
+}
+
+
+/* =========================
+   METODOLOGIA
+========================= */
+
+.metodologia {
+    background: var(--branco);
+}
+
+.metodologia-grid {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.metodo {
+    padding: 25px;
+    background: var(--fundo);
+    border-radius: 15px;
+}
+
+.metodo span {
+    color: var(--verde);
+    font-weight: bold;
+}
+
+.metodo h3 {
+    margin: 15px 0 10px;
+}
+
+.metodo p {
+    color: var(--cinza);
+    line-height: 1.5;
+}
+
+
+/* =========================
+   PROJETOS
+========================= */
+
+.projetos {
+    background: var(--fundo);
+}
+
+.projetos-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projetos-grid article {
+    padding: 30px;
+    background: var(--branco);
+    border-radius: 20px;
+    border: 1px solid var(--borda);
+}
+
+.projetos-grid article > span {
+    font-size: 40px;
+}
+
+.projetos-grid h3 {
+    margin: 15px 0;
+}
+
+.projetos-grid p {
+    color: var(--cinza);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz {
+    background:
+        linear-gradient(135deg, #e9f8ef, #fff8f2);
+}
+
+.quiz-box {
+    max-width: 750px;
+    margin: auto;
+
+    background: var(--branco);
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px #00000012;
+}
+
+.quiz-box h2 {
+    font-size: 35px;
+    margin: 15px 0 30px;
+}
+
+.opcoes {
+    display: grid;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.opcoes button {
+    padding: 16px;
+
+    border: 2px solid var(--borda);
+
+    background: var(--branco);
+
+    color: var(--texto);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.opcoes button:hover {
+    border-color: var(--verde);
+    background: var(--verde-claro);
+}
+
+#resultado {
+    margin: 25px 0;
+    font-weight: bold;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    background: var(--branco);
+}
+
+.faq-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--borda);
+}
+
+.faq-item button {
+    width: 100%;
+    padding: 22px 5px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: none;
+    border: none;
+
+    color: var(--texto);
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.faq-resposta {
+    display: none;
+
+    color: var(--cinza);
+    line-height: 1.7;
+
+    padding: 0 5px 20px;
+}
+
+.faq-item.active .faq-resposta {
+    display: block;
+}
+
+
+/* =========================
+   REFERÊNCIAS
+========================= */
+
+.referencias {
+    background: var(--fundo);
+}
+
+.fontes {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.fontes div {
+    padding: 25px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+}
+
+.fontes strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.fontes p {
+    color: var(--cinza);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #071c12;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.footer-logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.footer-logo span {
+    color: #63d596;
+}
+
+footer p {
+    color: #a9bfb1;
+    margin-top: 10px;
+}
+
+.footer-small {
+    font-size: 13px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 25px;
+    color: #79dca5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 2000;
+
+    background: #00000099;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+
+    max-width: 650px;
+    width: 100%;
+
+    background: var(--branco);
+
+    color: var(--texto);
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 30px 80px #0005;
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    border: none;
+    background: none;
+
+    font-size: 35px;
+
+    color: var(--texto);
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-lab {
+        width: 320px;
+        height: 320px;
+    }
+
+    .numeros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .objetivos-grid,
+    .cientistas-grid,
+    .valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ecolab-grid,
+    .projetos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metodologia-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    section {
+        padding: 75px 6%;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+    }
+
+    .hero-lab {
+        width: 260px;
+        height: 260px;
+    }
+
+    .lab-icon {
+        font-size: 90px;
+    }
+
+    .numeros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .numero {
+        padding: 25px 10px;
+    }
+
+    .sobre-grid,
+    .escola-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .escola-symbol {
+        margin: auto;
+    }
+
+    .objetivos-grid,
+    .cientistas-grid,
+    .ecolab-grid,
+    .projetos-grid,
+    .valores-grid,
+    .fontes {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .timeline-date {
+        text-align: left;
+    }
+
+    .timeline-content::before {
+        display: none;
+    }
+
+    .curso-progress {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .progress-line {
+        display: none;
+    }
+
+    .metodologia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-box {
+        padding: 30px 20px;
+    }
+}
