@@ -1,0 +1,1474 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6faf7;
+    color: #17221e;
+    line-height: 1.7;
+    transition: 0.3s;
+}
+
+body.dark {
+    background: #101714;
+    color: #e8f5ed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #dce9df;
+
+    z-index: 1000;
+}
+
+.dark header {
+    background: rgba(15,24,20,0.95);
+    border-color: #263b31;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #176b45;
+    white-space: nowrap;
+}
+
+.logo span {
+    margin-right: 5px;
+}
+
+.logo strong {
+    color: #d9a900;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #1d8757;
+}
+
+#temaBtn {
+    border: none;
+    background: #e8f4ec;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 140px 8% 80px;
+
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 60px;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 80% 30%, #e9f7cf, transparent 35%),
+        linear-gradient(135deg, #f8fff9, #edf8f1);
+}
+
+.dark .hero {
+    background:
+        radial-gradient(circle at 80% 30%, #173c2a, transparent 35%),
+        #101714;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    background: #e8f5ec;
+    color: #187348;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.95;
+    margin: 25px 0 15px;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #d8a900;
+}
+
+.hero h2 {
+    font-size: clamp(25px, 4vw, 43px);
+    color: #24734d;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 850px;
+    margin-bottom: 16px;
+    font-size: 17px;
+    color: #53635a;
+}
+
+.dark .hero p {
+    color: #b8c9bf;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    border: none;
+    padding: 14px 23px;
+
+    border-radius: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn.principal {
+    background: #19744b;
+    color: white;
+}
+
+.btn.secundario {
+    background: #e0b600;
+    color: #17221e;
+}
+
+.hero-card {
+    background: white;
+    border: 1px solid #dbe9df;
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 25px 70px rgba(22,80,45,0.13);
+
+    text-align: center;
+}
+
+.dark .hero-card {
+    background: #17231d;
+    border-color: #2d4437;
+}
+
+.orb {
+    width: 120px;
+    height: 120px;
+
+    margin: auto auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 50px;
+
+    background: #edf7d8;
+    border: 5px solid #dcb500;
+
+    animation: flutuar 3s infinite ease-in-out;
+}
+
+@keyframes flutuar {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.hero-card h3 {
+    color: #21764c;
+}
+
+.seta {
+    color: #d7ad00;
+    font-size: 25px;
+    margin: 5px;
+}
+
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.section {
+    padding: 110px 8%;
+}
+
+.section-title {
+    max-width: 900px;
+    margin-bottom: 55px;
+}
+
+.section-title > span {
+    color: #d0a500;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.section-title h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.1;
+    margin: 12px 0 20px;
+}
+
+.section-title p {
+    font-size: 17px;
+    color: #5b6961;
+}
+
+.dark .section-title p {
+    color: #b8c9bf;
+}
+
+.texto-grande {
+    max-width: 1000px;
+}
+
+.texto-grande p {
+    margin-bottom: 22px;
+    font-size: 18px;
+}
+
+.destaque {
+    background: white;
+}
+
+.dark .destaque {
+    background: #131d18;
+}
+
+
+/* =========================================================
+   CIENTISTAS
+========================================================= */
+
+.cientistas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cientista-card {
+    background: white;
+    border: 1px solid #dce9df;
+    border-radius: 20px;
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    box-shadow: 0 10px 30px rgba(30,80,50,0.05);
+}
+
+.dark .cientista-card {
+    background: #17231d;
+    border-color: #2b4034;
+}
+
+.cientista-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(30,100,55,0.13);
+}
+
+.cientista-img {
+    height: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 75px;
+
+    background:
+        linear-gradient(135deg, #dff3d4, #fff5be);
+}
+
+.cientista-info {
+    padding: 25px;
+}
+
+.area {
+    color: #d1a400;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.cientista-info h3 {
+    font-size: 25px;
+    margin: 7px 0;
+}
+
+.cientista-info p {
+    color: #65736b;
+    margin-bottom: 20px;
+}
+
+.dark .cientista-info p {
+    color: #b7c8be;
+}
+
+.cientista-info button,
+.animal-card button,
+.investigacao-box button,
+.animacao-cientifica button {
+    border: none;
+    background: #19744b;
+    color: white;
+
+    padding: 11px 17px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-weight: 800;
+}
+
+.destaque-cientista {
+    border: 2px solid #d8b200;
+}
+
+
+/* =========================================================
+   REGIÃO
+========================================================= */
+
+.regiao {
+    background: #eff8e9;
+}
+
+.dark .regiao {
+    background: #142018;
+}
+
+.ambiente-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.ambiente-card {
+    padding: 30px;
+
+    background: white;
+    border-radius: 20px;
+
+    border: 1px solid #d9e9d9;
+
+    transition: 0.25s;
+}
+
+.dark .ambiente-card {
+    background: #19261f;
+    border-color: #304638;
+}
+
+.ambiente-card:hover {
+    transform: translateY(-5px);
+}
+
+.ambiente-card > div {
+    font-size: 42px;
+}
+
+.ambiente-card h3 {
+    margin: 12px 0;
+    font-size: 24px;
+}
+
+.ambiente-card p {
+    color: #637169;
+}
+
+.dark .ambiente-card p {
+    color: #bac9c0;
+}
+
+
+/* =========================================================
+   ANIMAIS
+========================================================= */
+
+.animais-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.animal-card {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #dce9df;
+    border-radius: 20px;
+
+    transition: 0.25s;
+}
+
+.dark .animal-card {
+    background: #17231d;
+    border-color: #2b4034;
+}
+
+.animal-card:hover {
+    transform: translateY(-5px);
+}
+
+.animal-topo {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    margin-bottom: 17px;
+}
+
+.animal-topo img {
+    width: 78px;
+    height: 78px;
+
+    border-radius: 15px;
+
+    object-fit: cover;
+
+    border: 3px solid #d7b000;
+}
+
+.animal-topo span {
+    font-size: 10px;
+    font-weight: 900;
+    color: #d0a400;
+}
+
+.animal-topo h3 {
+    font-size: 25px;
+}
+
+.animal-card p {
+    color: #637169;
+    margin-bottom: 20px;
+}
+
+.dark .animal-card p {
+    color: #b8c9be;
+}
+
+.animal-destaque {
+    border: 2px solid #d6b000;
+}
+
+.animal-estudo {
+    margin-top: 35px;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    display: flex;
+    gap: 25px;
+
+    background: #183e2a;
+    color: white;
+}
+
+.estudo-icon {
+    font-size: 65px;
+}
+
+.animal-estudo span {
+    color: #f1cc38;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.animal-estudo h3 {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+.animal-estudo p {
+    color: #d3e6da;
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   PESQUISA LOCAL
+========================================================= */
+
+.pesquisa-local {
+    background: white;
+}
+
+.dark .pesquisa-local {
+    background: #131d18;
+}
+
+.pesquisa-box {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+
+    max-width: 1000px;
+
+    padding: 40px;
+
+    border: 1px solid #dce9df;
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(20,80,45,0.07);
+}
+
+.pesquisa-numero {
+    font-size: 55px;
+    font-weight: 900;
+    color: #d3aa00;
+}
+
+.pesquisa-box h3 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.mini-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.mini-tags span {
+    padding: 7px 12px;
+    background: #edf7df;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ECOLAB
+========================================================= */
+
+.ecolab-principal {
+    background:
+        linear-gradient(135deg, #f2f9e8, #fffdf0);
+}
+
+.dark .ecolab-principal {
+    background: #142019;
+}
+
+.ecolab-intro {
+    max-width: 1050px;
+}
+
+.ecolab-intro h3 {
+    font-size: 42px;
+    color: #18744a;
+    margin-bottom: 25px;
+}
+
+.ecolab-intro p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.aviso-ficticio {
+    margin: 45px 0;
+
+    padding: 30px;
+
+    border-left: 7px solid #d4ab00;
+
+    background: #fff7c9;
+
+    border-radius: 14px;
+}
+
+.dark .aviso-ficticio {
+    background: #332f17;
+}
+
+.aviso-ficticio strong {
+    font-size: 20px;
+}
+
+.pilares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.pilar {
+    position: relative;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 1px solid #dce9df;
+}
+
+.dark .pilar {
+    background: #18251e;
+    border-color: #304538;
+}
+
+.pilar b {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    color: #d5ac00;
+}
+
+.pilar span {
+    font-size: 40px;
+}
+
+.pilar h3 {
+    margin: 10px 0;
+    font-size: 23px;
+}
+
+.pilar p {
+    color: #68766e;
+}
+
+.dark .pilar p {
+    color: #b8c9bf;
+}
+
+.curso {
+    margin-top: 55px;
+}
+
+.curso h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.curso-linha {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.curso-linha > div {
+    padding: 20px;
+
+    background: #183e2a;
+    color: white;
+
+    border-radius: 15px;
+}
+
+.curso-linha span {
+    display: block;
+    color: #f1ca2e;
+    font-weight: 900;
+}
+
+.curso-linha strong {
+    display: block;
+    margin: 7px 0;
+}
+
+.curso-linha p {
+    font-size: 13px;
+    color: #cde0d4;
+}
+
+
+/* =========================================================
+   MISSÃO
+========================================================= */
+
+.missao {
+    background: #102d20;
+    color: white;
+}
+
+.missao .section-title p {
+    color: #c2d9cb;
+}
+
+.jogo {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background: #183d2b;
+
+    border: 1px solid #32634a;
+}
+
+.jogo-status {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+.jogo-status span {
+    font-size: 11px;
+    color: #b8d7c4;
+}
+
+.barra {
+    width: 300px;
+    max-width: 100%;
+
+    height: 13px;
+
+    margin-top: 7px;
+
+    background: #0d2118;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#energiaBarra {
+    height: 100%;
+    width: 100%;
+
+    background: #e6c329;
+
+    transition: 0.5s;
+}
+
+.fase {
+    font-weight: 900;
+    color: #e6c329;
+}
+
+#missaoConteudo {
+    text-align: center;
+}
+
+.problema-label {
+    color: #e6c329;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+#missaoConteudo h3 {
+    font-size: 34px;
+    margin: 15px 0;
+}
+
+#missaoConteudo p {
+    color: #c4d9cc;
+}
+
+.opcoes-missao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.opcoes-missao button {
+    padding: 20px;
+
+    border: 1px solid #44765a;
+
+    background: #204a34;
+
+    color: white;
+
+    border-radius: 13px;
+
+    cursor: pointer;
+
+    font-weight: 800;
+
+    transition: 0.2s;
+}
+
+.opcoes-missao button:hover {
+    background: #2d6044;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   DADOS
+========================================================= */
+
+.dados {
+    background: white;
+}
+
+.dark .dados {
+    background: #131d18;
+}
+
+.dados-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.grafico-card {
+    padding: 30px;
+
+    border: 1px solid #dce9df;
+    border-radius: 20px;
+}
+
+.grafico-card h3 {
+    margin-bottom: 30px;
+}
+
+.barra-grafico {
+    display: grid;
+    grid-template-columns: 80px 1fr 60px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 20px 0;
+}
+
+.barra-grafico span {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.barra-grafico > div {
+    height: 22px;
+
+    background: #e5eee8;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.barra-grafico i {
+    display: block;
+
+    height: 100%;
+
+    background: #208050;
+
+    border-radius: 20px;
+}
+
+.karikó {
+    margin-top: 45px;
+
+    display: grid;
+    grid-template-columns: 120px 1fr;
+
+    gap: 30px;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background: #eef8e4;
+
+    border: 1px solid #d7e7ca;
+}
+
+.dark .karikó {
+    background: #19271e;
+    border-color: #304536;
+}
+
+.dna {
+    font-size: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.karikó span {
+    color: #d2a800;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.karikó h3 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.karikó p {
+    margin: 15px 0;
+}
+
+.frase {
+    display: block;
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    color: #187448;
+}
+
+
+/* =========================================================
+   PROJETOS
+========================================================= */
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.projeto-card {
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #dce9df;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(20,80,45,0.05);
+}
+
+.dark .projeto-card {
+    background: #17231d;
+    border-color: #2d4235;
+}
+
+.projeto-card > span {
+    color: #d0a400;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.projeto-card h3 {
+    font-size: 28px;
+    margin: 10px 0 20px;
+}
+
+.projeto-card p {
+    margin: 9px 0;
+    color: #65736b;
+}
+
+.dark .projeto-card p {
+    color: #b7c8be;
+}
+
+.mini-grafico {
+    height: 90px;
+
+    display: flex;
+    align-items: end;
+    gap: 10px;
+
+    margin-top: 25px;
+
+    border-bottom: 2px solid #c9d8cf;
+}
+
+.mini-grafico i {
+    flex: 1;
+
+    background: #248354;
+
+    border-radius: 5px 5px 0 0;
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz-section {
+    background: #edf7e9;
+}
+
+.dark .quiz-section {
+    background: #142019;
+}
+
+.quiz-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    border: 1px solid #dce9df;
+
+    box-shadow: 0 20px 50px rgba(20,80,45,0.08);
+}
+
+.dark .quiz-box {
+    background: #19261f;
+    border-color: #304538;
+}
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+
+    color: #187348;
+
+    font-weight: 900;
+
+    margin-bottom: 35px;
+}
+
+#pergunta {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+#alternativas {
+    display: grid;
+    gap: 12px;
+}
+
+.alternativa {
+    padding: 16px;
+
+    text-align: left;
+
+    background: #f0f6f1;
+
+    border: 2px solid transparent;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    font-weight: 700;
+}
+
+.dark .alternativa {
+    background: #223128;
+    color: white;
+}
+
+.alternativa:hover {
+    border-color: #218052;
+}
+
+.alternativa.certa {
+    background: #d9f2dd;
+    border-color: #2e9255;
+}
+
+.alternativa.errada {
+    background: #ffe0d8;
+    border-color: #d05b45;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final {
+    min-height: 55vh;
+
+    padding: 100px 8%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #123725;
+    color: white;
+}
+
+.final-icon {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.final h2 {
+    font-size: clamp(30px, 5vw, 60px);
+    line-height: 1.05;
+}
+
+.final h2:nth-child(3) {
+    color: #e6c42b;
+}
+
+.final p {
+    margin-top: 30px;
+    color: #bdd5c6;
+}
+
+
+/* =========================================================
+   MODAIS
+========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.72);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 2000;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-content {
+    width: 900px;
+    max-width: 100%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    position: relative;
+
+    padding: 45px;
+
+    background: white;
+
+    color: #17221e;
+
+    border-radius: 25px;
+}
+
+.dark .modal-content {
+    background: #17231d;
+    color: white;
+}
+
+.fechar {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e7efe9;
+
+    cursor: pointer;
+
+    font-size: 25px;
+}
+
+.modal-icone {
+    font-size: 70px;
+}
+
+#modalArea,
+#animalModalTipo {
+    color: #d0a500;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.modal-content h2 {
+    font-size: 40px;
+    margin: 10px 0 25px;
+}
+
+#modalTexto p,
+#animalModalTexto p {
+    margin-bottom: 16px;
+}
+
+.animacao-cientifica {
+    margin-top: 35px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: #eff8e7;
+
+    text-align: center;
+}
+
+.dark .animacao-cientifica {
+    background: #203127;
+}
+
+.animacao-cientifica h3 {
+    margin-bottom: 25px;
+}
+
+#animacaoArea {
+    min-height: 120px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    overflow: hidden;
+}
+
+.animacao-item {
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    font-size: 30px;
+
+    opacity: 0;
+}
+
+.animar {
+    animation: entrar 0.7s forwards;
+}
+
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateX(-60px) scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.investigacao-box {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #eff8e7;
+
+    border-radius: 18px;
+}
+
+.dark .investigacao-box {
+    background: #203127;
+}
+
+#animalResposta {
+    margin-top: 18px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .cientistas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .curso-linha {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    header {
+        padding: 0 5%;
+    }
+
+    .hero {
+        padding: 120px 5% 70px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .cientistas-grid,
+    .ambiente-grid,
+    .animais-grid,
+    .dados-grid,
+    .projetos-grid,
+    .pilares {
+        grid-template-columns: 1fr;
+    }
+
+    .curso-linha {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .jogo-status {
+        flex-direction: column;
+    }
+
+    .opcoes-missao {
+        grid-template-columns: 1fr;
+    }
+
+    .pesquisa-box,
+    .karikó {
+        grid-template-columns: 1fr;
+    }
+
+    .animal-estudo {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .curso-linha {
+        grid-template-columns: 1fr;
+    }
+
+    .barra-grafico {
+        grid-template-columns: 65px 1fr 50px;
+    }
+
+}
