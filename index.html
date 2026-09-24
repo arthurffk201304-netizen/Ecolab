@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoLab Delas | Ciências Delas</title>
+
+    <meta
+        name="description"
+        content="EcoLab Delas — projeto fictício de iniciação científica escolar que conecta meninas, mulheres, ciência e meio ambiente."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header id="topo">
+
+    <div class="logo">
+        <span>🌱</span>
+        EcoLab <strong>Delas</strong>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#elas">Elas</a>
+        <a href="#regiao">Região</a>
+        <a href="#animais">Animais</a>
+        <a href="#pesquisa-local">Pesquisa</a>
+        <a href="#ecolab">EcoLab</a>
+        <a href="#missao">Missão</a>
+        <a href="#dados">Dados</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#quiz">Quiz</a>
+    </nav>
+
+    <button id="temaBtn" onclick="alternarTema()">🌙</button>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="hero" id="inicio">
+
+    <div class="hero-conteudo">
+
+        <span class="tag">CIÊNCIAS DELAS • MEIO AMBIENTE • INVESTIGAÇÃO</span>
+
+        <h1>ECOLAB <span>DELAS</span></h1>
+
+        <h2>Meninas e Mulheres + no EcoLab</h2>
+
+        <p>
+            O EcoLab é um projeto fictício de iniciação científica escolar
+            criado para incentivar meninas e mulheres a se aproximarem da
+            ciência por meio da investigação, da experimentação e da busca
+            por soluções para problemas ambientais.
+        </p>
+
+        <p>
+            A proposta conecta conhecimento científico, protagonismo feminino
+            e realidade ambiental, transformando curiosidade em perguntas,
+            perguntas em investigação e investigação em possíveis soluções.
+        </p>
+
+        <div class="botoes">
+
+            <a href="#ecolab" class="btn principal">
+                🧪 CONHEÇA O ECOLAB
+            </a>
+
+            <a href="#missao" class="btn secundario">
+                🌎 COMEÇAR MISSÃO
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="orb">
+            🧬
+        </div>
+
+        <h3>ELAS INSPIRAM</h3>
+
+        <div class="seta">↓</div>
+
+        <h3>NÓS INVESTIGAMOS</h3>
+
+        <div class="seta">↓</div>
+
+        <h3>NÓS CRIAMOS</h3>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRODUÇÃO
+========================================================= -->
+
+<section class="section destaque">
+
+    <div class="section-title">
+        <span>01 • CIÊNCIAS DELAS</span>
+        <h2>Por que mulheres na ciência?</h2>
+    </div>
+
+    <div class="texto-grande">
+
+        <p>
+            A ciência é construída por pessoas que fazem perguntas, observam
+            fenômenos, desenvolvem hipóteses, testam ideias e compartilham
+            resultados. Ao longo da história, muitas mulheres participaram
+            desse processo, mesmo enfrentando barreiras de acesso à educação,
+            reconhecimento e oportunidades.
+        </p>
+
+        <p>
+            O EcoLab parte dessa história para propor uma experiência escolar
+            em que meninas possam se reconhecer como possíveis cientistas.
+            Não se trata apenas de conhecer nomes importantes, mas de mostrar
+            que fazer ciência também significa observar o ambiente, investigar
+            problemas, interpretar dados, trabalhar em equipe e apresentar
+            descobertas.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ELAS
+========================================================= -->
+
+<section class="section" id="elas">
+
+    <div class="section-title">
+
+        <span>02 • ELAS</span>
+
+        <h2>Mulheres que transformaram a ciência</h2>
+
+        <p>
+            Conheça pesquisadoras de diferentes áreas e descubra como suas
+            perguntas, pesquisas e descobertas ajudam a mostrar que a ciência
+            é construída por trajetórias diferentes.
+        </p>
+
+    </div>
+
+
+    <div class="cientistas-grid">
+
+
+        <!-- KATALIN -->
+
+        <article class="cientista-card">
+
+            <div class="cientista-img">
+                🧬
+            </div>
+
+            <div class="cientista-info">
+
+                <span class="area">RNA • BIOQUÍMICA</span>
+
+                <h3>Katalin Karikó</h3>
+
+                <p>
+                    Pesquisadora cujo trabalho com RNA mensageiro ajudou a
+                    estabelecer bases para vacinas de mRNA contra a COVID-19.
+                </p>
+
+                <button onclick="abrirCientista('katalin')">
+                    Conhecer →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- JANE -->
+
+        <article class="cientista-card">
+
+            <div class="cientista-img">
+                🐒
+            </div>
+
+            <div class="cientista-info">
+
+                <span class="area">ETOLOGIA • PRIMATAS</span>
+
+                <h3>Jane Goodall</h3>
+
+                <p>
+                    Pesquisadora conhecida por seus estudos de longo prazo
+                    sobre chimpanzés em ambiente natural.
+                </p>
+
+                <button onclick="abrirCientista('jane')">
+                    Conhecer →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- RACHEL -->
+
+        <article class="cientista-card">
+
+            <div class="cientista-img">
+                🌊
+            </div>
+
+            <div class="cientista-info">
+
+                <span class="area">BIOLOGIA • AMBIENTE</span>
+
+                <h3>Rachel Carson</h3>
+
+                <p>
+                    Cientista e escritora que ajudou a ampliar o debate público
+                    sobre os efeitos ambientais de substâncias químicas.
+                </p>
+
+                <button onclick="abrirCientista('rachel')">
+                    Conhecer →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- NEIVA -->
+
+        <article class="cientista-card destaque-cientista">
+
+            <div class="cientista-img">
+                🦜
+            </div>
+
+            <div class="cientista-info">
+
+                <span class="area">BIOLOGIA • CONSERVAÇÃO</span>
+
+                <h3>Neiva Guedes</h3>
+
+                <p>
+                    Bióloga brasileira ligada ao Projeto Arara Azul e à
+                    conservação da arara-azul-grande no Pantanal.
+                </p>
+
+                <button onclick="abrirCientista('neiva')">
+                    Conhecer →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- WANGARI -->
+
+        <article class="cientista-card">
+
+            <div class="cientista-img">
+                🌳
+            </div>
+
+            <div class="cientista-info">
+
+                <span class="area">AMBIENTE • CONSERVAÇÃO</span>
+
+                <h3>Wangari Maathai</h3>
+
+                <p>
+                    Ambientalista queniana que relacionou conservação ambiental,
+                    comunidades e participação social.
+                </p>
+
+                <button onclick="abrirCientista('wangari')">
+                    Conhecer →
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     REGIÃO DOS LAGOS
+========================================================= -->
+
+<section class="section regiao" id="regiao">
+
+    <div class="section-title">
+
+        <span>03 • NOSSO AMBIENTE</span>
+
+        <h2>Ciência na Região dos Lagos</h2>
+
+        <p>
+            A Região dos Lagos possui ambientes naturais que permitem diferentes
+            investigações científicas, incluindo lagoas, restingas, áreas
+            vegetadas e diferentes formas de vida.
+        </p>
+
+    </div>
+
+
+    <div class="ambiente-grid">
+
+        <div class="ambiente-card">
+            <div>🌱</div>
+            <h3>Flora</h3>
+            <p>
+                Plantas e comunidades vegetais podem ser observadas e estudadas
+                para compreender biodiversidade e mudanças ambientais.
+            </p>
+        </div>
+
+        <div class="ambiente-card">
+            <div>🐦</div>
+            <h3>Aves</h3>
+            <p>
+                A observação de aves pode ajudar a compreender habitats,
+                alimentação e relações ecológicas.
+            </p>
+        </div>
+
+        <div class="ambiente-card">
+            <div>🦋</div>
+            <h3>Insetos</h3>
+            <p>
+                Insetos participam de processos ecológicos importantes, como
+                polinização e decomposição.
+            </p>
+        </div>
+
+        <div class="ambiente-card">
+            <div>🌊</div>
+            <h3>Lagoas</h3>
+            <p>
+                Ambientes aquáticos permitem investigações relacionadas à água,
+                biodiversidade e impactos ambientais.
+            </p>
+        </div>
+
+        <div class="ambiente-card">
+            <div>🏖️</div>
+            <h3>Restinga</h3>
+            <p>
+                A vegetação de restinga é parte importante dos ambientes
+                costeiros da região.
+            </p>
+        </div>
+
+        <div class="ambiente-card">
+            <div>🔬</div>
+            <h3>Investigação</h3>
+            <p>
+                O EcoLab transforma esses ambientes em possibilidades de
+                perguntas e pesquisas escolares.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ANIMAIS
+========================================================= -->
+
+<section class="section" id="animais">
+
+    <div class="section-title">
+
+        <span>04 • VIDA ANIMAL</span>
+
+        <h2>Animais da Região dos Lagos</h2>
+
+        <p>
+            Esta seção funciona como um pequeno museu digital. A proposta é
+            conhecer animais, compreender seus habitats e descobrir quais
+            perguntas científicas podem ser feitas sobre eles.
+        </p>
+
+    </div>
+
+
+    <div class="animais-grid">
+
+
+        <!-- AVE -->
+
+        <article class="animal-card">
+
+            <div class="animal-topo">
+
+                <img
+                    src="https://loremflickr.com/120/120/heron,bird"
+                    alt="Ave"
+                >
+
+                <div>
+                    <span>AVES</span>
+                    <h3>Garça</h3>
+                </div>
+
+            </div>
+
+            <p>
+                Pode ser observada em ambientes próximos à água. Pesquisas podem
+                investigar alimentação, comportamento e relação com o ambiente.
+            </p>
+
+            <button onclick="investigarAnimal('garca')">
+                🔎 Investigar este animal
+            </button>
+
+        </article>
+
+
+        <!-- TARTARUGA -->
+
+        <article class="animal-card">
+
+            <div class="animal-topo">
+
+                <img
+                    src="https://loremflickr.com/120/120/sea,turtle"
+                    alt="Tartaruga marinha"
+                >
+
+                <div>
+                    <span>RÉPTEIS</span>
+                    <h3>Tartaruga-marinha</h3>
+                </div>
+
+            </div>
+
+            <p>
+                Animais marinhos podem ser estudados em relação ao habitat,
+                alimentação, reprodução e impactos causados por atividades humanas.
+            </p>
+
+            <button onclick="investigarAnimal('tartaruga')">
+                🔎 Investigar este animal
+            </button>
+
+        </article>
+
+
+        <!-- BORBOLETA -->
+
+        <article class="animal-card">
+
+            <div class="animal-topo">
+
+                <img
+                    src="https://loremflickr.com/120/120/butterfly"
+                    alt="Borboleta"
+                >
+
+                <div>
+                    <span>INSETOS</span>
+                    <h3>Borboletas</h3>
+                </div>
+
+            </div>
+
+            <p>
+                Borboletas podem ser utilizadas em estudos de biodiversidade,
+                plantas hospedeiras e mudanças nos ambientes.
+            </p>
+
+            <button onclick="investigarAnimal('borboleta')">
+                🔎 Investigar este animal
+            </button>
+
+        </article>
+
+
+        <!-- CHIMPANZÉ -->
+
+        <article class="animal-card animal-destaque">
+
+            <div class="animal-topo">
+
+                <img
+                    src="https://loremflickr.com/120/120/chimpanzee"
+                    alt="Chimpanzé"
+                >
+
+                <div>
+                    <span>PRIMATAS • ESTUDO MARCANTE</span>
+                    <h3>Chimpanzé</h3>
+                </div>
+
+            </div>
+
+            <p>
+                Os estudos de Jane Goodall em Gombe ficaram marcados pela
+                observação prolongada de chimpanzés em seu ambiente natural,
+                incluindo registros do uso de objetos como ferramentas.
+            </p>
+
+            <button onclick="investigarAnimal('chimpanze')">
+                🔎 Investigar este animal
+            </button>
+
+        </article>
+
+
+        <!-- ARARA -->
+
+        <article class="animal-card">
+
+            <div class="animal-topo">
+
+                <img
+                    src="https://loremflickr.com/120/120/macaw"
+                    alt="Arara"
+                >
+
+                <div>
+                    <span>AVES</span>
+                    <h3>Arara-azul</h3>
+                </div>
+
+            </div>
+
+            <p>
+                A arara-azul-grande é estudada pelo Projeto Arara Azul, coordenado
+                por Neiva Guedes, com pesquisas relacionadas à biologia,
+                monitoramento e conservação.
+            </p>
+
+            <button onclick="investigarAnimal('arara')">
+                🔎 Investigar este animal
+            </button>
+
+        </article>
+
+
+        <!-- LAGARTO -->
+
+        <article class="animal-card">
+
+            <div class="animal-topo">
+
+                <img
+                    src="https://loremflickr.com/120/120/lizard"
+                    alt="Lagarto"
+                >
+
+                <div>
+                    <span>RÉPTEIS</span>
+                    <h3>Lagartos</h3>
+                </div>
+
+            </div>
+
+            <p>
+                Répteis podem ser estudados para compreender distribuição,
+                comportamento, alimentação e relações com o habitat.
+            </p>
+
+            <button onclick="investigarAnimal('lagarto')">
+                🔎 Investigar este animal
+            </button>
+
+        </article>
+
+    </div>
+
+
+    <!-- JANE GOODALL -->
+
+    <div class="animal-estudo">
+
+        <div class="estudo-icon">
+            🐒
+        </div>
+
+        <div>
+
+            <span>ESTUDO MARCANTE</span>
+
+            <h3>Jane Goodall e os chimpanzés</h3>
+
+            <p>
+                Jane Goodall iniciou seus estudos de longo prazo com chimpanzés
+                em Gombe, na Tanzânia, em 1960. Seu trabalho destacou a importância
+                de observar os animais em seu ambiente natural e registrar
+                cuidadosamente seus comportamentos. Uma observação marcante foi
+                o uso de objetos pelos chimpanzés para obter alimento.
+            </p>
+
+            <p>
+                No EcoLab, esse caso representa uma ideia fundamental:
+                <strong>antes de tentar explicar um fenômeno, precisamos
+                aprender a observá-lo.</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PESQUISA LOCAL
+========================================================= -->
+
+<section class="section pesquisa-local" id="pesquisa-local">
+
+    <div class="section-title">
+
+        <span>05 • CIÊNCIA PERTO DE NÓS</span>
+
+        <h2>Pesquisa local</h2>
+
+        <p>
+            A ciência não acontece somente em lugares distantes. A própria
+            Região dos Lagos possui espaços de pesquisa e biodiversidade que
+            podem ser utilizados como ponto de partida para perguntas científicas.
+        </p>
+
+    </div>
+
+
+    <div class="pesquisa-box">
+
+        <div class="pesquisa-numero">
+            01
+        </div>
+
+        <div>
+
+            <span>REGIÃO DOS LAGOS</span>
+
+            <h3>Núcleo Experimental de Iguaba Grande</h3>
+
+            <p>
+                O Núcleo Experimental de Iguaba Grande, ligado à Universidade
+                Federal Fluminense, possui áreas de interesse científico,
+                incluindo vegetação de restinga, floresta e biodiversidade.
+                Esse tipo de espaço mostra como ambientes próximos podem servir
+                como laboratório natural para observações e estudos.
+            </p>
+
+            <div class="mini-tags">
+                <span>🌱 Flora</span>
+                <span>🦋 Biodiversidade</span>
+                <span>🌳 Restinga</span>
+                <span>🔬 Pesquisa</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ECOLAB
+========================================================= -->
+
+<section class="section ecolab-principal" id="ecolab">
+
+    <div class="section-title">
+
+        <span>06 • O CORAÇÃO DO PROJETO</span>
+
+        <h2>O que é o EcoLab?</h2>
+
+    </div>
+
+
+    <div class="ecolab-intro">
+
+        <h3>O ECOLAB NÃO É APENAS UM SITE.</h3>
+
+        <p>
+            O EcoLab é uma proposta fictícia de iniciação científica escolar
+            criada para imaginar como seria aproximar meninas e mulheres da
+            ciência desde a educação básica. A proposta combina educação
+            científica, meio ambiente, investigação, tecnologia, trabalho em
+            equipe e divulgação científica.
+        </p>
+
+        <p>
+            Dentro dessa proposta, estudantes poderiam conhecer pesquisadoras,
+            observar problemas ambientais, formular perguntas, pesquisar
+            informações, realizar atividades práticas, organizar dados,
+            construir hipóteses, testar possibilidades e apresentar seus
+            resultados para outras pessoas.
+        </p>
+
+        <p>
+            O projeto parte de uma ideia simples: estudantes não precisam
+            apenas aprender ciência. Elas também podem aprender a pensar
+            cientificamente. Isso significa aprender a perguntar, observar,
+            comparar, investigar, analisar evidências e reconhecer quando
+            uma conclusão precisa de mais dados.
+        </p>
+
+        <p>
+            O EcoLab ainda não existe como programa oficial. Ele foi criado
+            especialmente como uma proposta para a feira escolar, com a
+            intenção de mostrar como uma iniciativa desse tipo poderia,
+            futuramente, ser adaptada e transformada em uma experiência real
+            dentro da escola.
+        </p>
+
+    </div>
+
+
+    <div class="aviso-ficticio">
+
+        <strong>⚠️ PROJETO FICTÍCIO</strong>
+
+        <p>
+            O EcoLab apresentado neste site é uma proposta desenvolvida para
+            a feira escolar. Ele não é atualmente um curso oficial ou uma
+            instituição de pesquisa. Seu objetivo é apresentar uma ideia que,
+            futuramente, poderia ser adaptada e desenvolvida como projeto
+            educacional real.
+        </p>
+
+    </div>
+
+
+    <div class="pilares">
+
+        <div class="pilar">
+            <b>01</b>
+            <span>👩‍🔬</span>
+            <h3>Representar</h3>
+            <p>
+                Apresentar mulheres que contribuíram para diferentes áreas
+                científicas.
+            </p>
+        </div>
+
+        <div class="pilar">
+            <b>02</b>
+            <span>🔎</span>
+            <h3>Investigar</h3>
+            <p>
+                Transformar problemas em perguntas que possam ser pesquisadas.
+            </p>
+        </div>
+
+        <div class="pilar">
+            <b>03</b>
+            <span>🌎</span>
+            <h3>Conectar</h3>
+            <p>
+                Relacionar ciência com o ambiente e a realidade local.
+            </p>
+        </div>
+
+        <div class="pilar">
+            <b>04</b>
+            <span>🧪</span>
+            <h3>Experimentar</h3>
+            <p>
+                Criar atividades práticas e desenvolver investigações.
+            </p>
+        </div>
+
+        <div class="pilar">
+            <b>05</b>
+            <span>💡</span>
+            <h3>Criar</h3>
+            <p>
+                Desenvolver propostas para possíveis problemas ambientais.
+            </p>
+        </div>
+
+        <div class="pilar">
+            <b>06</b>
+            <span>🎤</span>
+            <h3>Divulgar</h3>
+            <p>
+                Compartilhar resultados e tornar a ciência compreensível.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="curso">
+
+        <h3>Como o curso poderia funcionar?</h3>
+
+        <div class="curso-linha">
+
+            <div>
+                <span>01</span>
+                <strong>Descobrir</strong>
+                <p>Conhecer cientistas e problemas ambientais.</p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <strong>Perguntar</strong>
+                <p>Transformar curiosidade em perguntas.</p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <strong>Investigar</strong>
+                <p>Pesquisar e coletar informações.</p>
+            </div>
+
+            <div>
+                <span>04</span>
+                <strong>Experimentar</strong>
+                <p>Testar hipóteses e possibilidades.</p>
+            </div>
+
+            <div>
+                <span>05</span>
+                <strong>Criar</strong>
+                <p>Construir propostas de solução.</p>
+            </div>
+
+            <div>
+                <span>06</span>
+                <strong>Apresentar</strong>
+                <p>Divulgar o que foi descoberto.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MISSÃO
+========================================================= -->
+
+<section class="section missao" id="missao">
+
+    <div class="section-title">
+
+        <span>07 • EXPERIÊNCIA INTERATIVA</span>
+
+        <h2>🧪 Missão EcoLab</h2>
+
+        <p>
+            Você recebeu uma missão científica. Observe, formule uma hipótese,
+            analise os dados e escolha uma possível solução.
+        </p>
+
+    </div>
+
+
+    <div class="jogo">
+
+        <div class="jogo-status">
+
+            <div>
+                <span>ENERGIA CIENTÍFICA</span>
+
+                <div class="barra">
+                    <div id="energiaBarra"></div>
+                </div>
+
+                <strong id="energiaTexto">100%</strong>
+            </div>
+
+            <div class="fase">
+                FASE <span id="faseNumero">1</span>/4
+            </div>
+
+        </div>
+
+
+        <div id="missaoConteudo">
+
+            <span class="problema-label">🌎 PROBLEMA</span>
+
+            <h3>
+                Uma área natural está apresentando alterações.
+            </h3>
+
+            <p>
+                Você precisa descobrir qual aspecto deveria ser investigado
+                primeiro. Escolha cuidadosamente.
+            </p>
+
+
+            <div class="opcoes-missao">
+
+                <button onclick="escolherMissao('vegetacao')">
+                    🌱 Observar vegetação
+                </button>
+
+                <button onclick="escolherMissao('residuos')">
+                    🗑️ Verificar resíduos
+                </button>
+
+                <button onclick="escolherMissao('agua')">
+                    💧 Investigar água
+                </button>
+
+                <button onclick="escolherMissao('animais')">
+                    🐾 Observar animais
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DADOS
+========================================================= -->
+
+<section class="section dados" id="dados">
+
+    <div class="section-title">
+
+        <span>08 • DADOS REAIS</span>
+
+        <h2>Mulheres na ciência: ainda existe uma diferença</h2>
+
+        <p>
+            Dados internacionais ajudam a transformar uma discussão abstrata
+            em uma questão que pode ser observada e analisada.
+        </p>
+
+    </div>
+
+
+    <div class="dados-grid">
+
+        <div class="grafico-card">
+
+            <h3>Pesquisadores no mundo — 2023</h3>
+
+            <div class="grafico">
+
+                <div class="barra-grafico">
+
+                    <span>Mulheres</span>
+
+                    <div>
+                        <i style="width:31.4%"></i>
+                    </div>
+
+                    <strong>31,4%</strong>
+
+                </div>
+
+                <div class="barra-grafico">
+
+                    <span>Homens</span>
+
+                    <div>
+                        <i style="width:68.6%"></i>
+                    </div>
+
+                    <strong>68,6%</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="grafico-card">
+
+            <h3>Formandos em STEM</h3>
+
+            <div class="grafico">
+
+                <div class="barra-grafico">
+
+                    <span>Mulheres</span>
+
+                    <div>
+                        <i style="width:35%"></i>
+                    </div>
+
+                    <strong>35%</strong>
+
+                </div>
+
+                <div class="barra-grafico">
+
+                    <span>Outros</span>
+
+                    <div>
+                        <i style="width:65%"></i>
+                    </div>
+
+                    <strong>65%</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="karikó">
+
+        <div class="dna">
+            🧬
+        </div>
+
+        <div>
+
+            <span>UM EXEMPLO QUE POUCA GENTE CONHECE</span>
+
+            <h3>A pesquisa que ajudou a mudar a pandemia</h3>
+
+            <p>
+                Katalin Karikó dedicou décadas ao estudo do RNA mensageiro.
+                Em 2005, ela e Drew Weissman demonstraram que determinadas
+                modificações no RNA poderiam reduzir respostas inflamatórias
+                indesejadas e aumentar a produção de proteínas.
+            </p>
+
+            <p>
+                Esse trabalho tornou-se uma base fundamental para o
+                desenvolvimento de vacinas de mRNA contra a COVID-19.
+                Em 2023, os dois receberam o Nobel de Fisiologia ou Medicina
+                por essas descobertas.
+            </p>
+
+            <strong class="frase">
+                “Antes de existir uma vacina, existiam décadas de pesquisa.”
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJETOS
+========================================================= -->
+
+<section class="section" id="projetos">
+
+    <div class="section-title">
+
+        <span>09 • FUTURO DO ECOLAB</span>
+
+        <h2>Projetos EcoLab</h2>
+
+        <p>
+            Estes projetos são apresentados como atividades que poderiam
+            nascer dentro do curso fictício EcoLab. Cada um parte de um
+            problema, transforma o problema em pergunta e procura construir
+            uma possível solução baseada em dados.
+        </p>
+
+    </div>
+
+
+    <div class="projetos-grid">
+
+
+        <article class="projeto-card">
+
+            <span>PROJETO 01</span>
+
+            <h3>💧 Água</h3>
+
+            <p>
+                <strong>Problema:</strong> desperdício e conservação da água.
+            </p>
+
+            <p>
+                <strong>Pergunta:</strong> como identificar pontos de desperdício?
+            </p>
+
+            <p>
+                <strong>Investigação:</strong> levantamento e comparação de dados.
+            </p>
+
+            <p>
+                <strong>Resultado:</strong> proposta de estratégias de redução.
+            </p>
+
+            <div class="mini-grafico">
+                <i style="height:35%"></i>
+                <i style="height:65%"></i>
+                <i style="height:45%"></i>
+                <i style="height:80%"></i>
+                <i style="height:55%"></i>
+            </div>
+
+        </article>
+
+
+        <article class="projeto-card">
+
+            <span>PROJETO 02</span>
+
+            <h3>🌱 Restinga</h3>
+
+            <p>
+                <strong>Problema:</strong> alteração de ambientes naturais.
+            </p>
+
+            <p>
+                <strong>Pergunta:</strong> quais espécies podem ser registradas?
+            </p>
+
+            <p>
+                <strong>Investigação:</strong> observação e catalogação.
+            </p>
+
+            <p>
+                <strong>Resultado:</strong> catálogo digital da biodiversidade.
+            </p>
+
+            <div class="mini-grafico">
+                <i style="height:70%"></i>
+                <i style="height:45%"></i>
+                <i style="height:85%"></i>
+                <i style="height:55%"></i>
+                <i style="height:90%"></i>
+            </div>
+
+        </article>
+
+
+        <article class="projeto-card">
+
+            <span>PROJETO 03</span>
+
+            <h3>🐾 Fauna</h3>
+
+            <p>
+                <strong>Problema:</strong> pouco conhecimento sobre animais.
+            </p>
+
+            <p>
+                <strong>Pergunta:</strong> quais espécies podem ser encontradas?
+            </p>
+
+            <p>
+                <strong>Investigação:</strong> pesquisa e observação responsável.
+            </p>
+
+            <p>
+                <strong>Resultado:</strong> guia digital de espécies.
+            </p>
+
+            <div class="mini-grafico">
+                <i style="height:50%"></i>
+                <i style="height:80%"></i>
+                <i style="height:60%"></i>
+                <i style="height:90%"></i>
+                <i style="height:70%"></i>
+            </div>
+
+        </article>
+
+
+        <article class="projeto-card">
+
+            <span>PROJETO 04</span>
+
+            <h3>🗑️ Resíduos</h3>
+
+            <p>
+                <strong>Problema:</strong> produção e descarte de resíduos.
+            </p>
+
+            <p>
+                <strong>Pergunta:</strong> quanto resíduo é produzido?
+            </p>
+
+            <p>
+                <strong>Investigação:</strong> levantamento e classificação.
+            </p>
+
+            <p>
+                <strong>Resultado:</strong> proposta de redução.
+            </p>
+
+            <div class="mini-grafico">
+                <i style="height:85%"></i>
+                <i style="height:70%"></i>
+                <i style="height:55%"></i>
+                <i style="height:40%"></i>
+                <i style="height:30%"></i>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUIZ
+========================================================= -->
+
+<section class="section quiz-section" id="quiz">
+
+    <div class="section-title">
+
+        <span>10 • DESAFIO FINAL</span>
+
+        <h2>🧠 Quiz EcoLab</h2>
+
+        <p>
+            O quiz foi criado para testar se você realmente percorreu a
+            experiência. As perguntas envolvem diferentes partes do site.
+        </p>
+
+    </div>
+
+
+    <div class="quiz-box">
+
+        <div class="quiz-top">
+
+            <span id="quizNumero">Pergunta 1 de 10</span>
+
+            <span id="quizPontos">0 pontos</span>
+
+        </div>
+
+
+        <div id="quizConteudo">
+
+            <h3 id="pergunta"></h3>
+
+            <div id="alternativas"></div>
+
+        </div>
+
+
+        <button
+            id="proximaPergunta"
+            class="btn principal"
+            onclick="proximaPergunta()"
+            style="display:none;"
+        >
+            Próxima pergunta →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL
+========================================================= -->
+
+<section class="final">
+
+    <div class="final-icon">
+        🌱
+    </div>
+
+    <h2>ELAS INSPIRAM.</h2>
+
+    <h2>NÓS INVESTIGAMOS.</h2>
+
+    <h2>O FUTURO COMEÇA COM UMA PERGUNTA.</h2>
+
+    <p>
+        EcoLab Delas • Ciências Delas • Meio Ambiente • Investigação
+    </p>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     MODAL CIENTISTAS
+========================================================= -->
+
+<div id="cientistaModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="fechar" onclick="fecharModal()">×</button>
+
+        <div id="modalIcone" class="modal-icone"></div>
+
+        <span id="modalArea"></span>
+
+        <h2 id="modalTitulo"></h2>
+
+        <div id="modalTexto"></div>
+
+        <div class="animacao-cientifica">
+
+            <h3>🔬 VER A DESCOBERTA</h3>
+
+            <div id="animacaoArea"></div>
+
+            <button onclick="iniciarAnimacao()">
+                ▶ Iniciar animação
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MODAL ANIMAL
+========================================================= -->
+
+<div id="animalModal" class="modal">
+
+    <div class="modal-content animal-modal">
+
+        <button class="fechar" onclick="fecharAnimal()">×</button>
+
+        <div id="animalModalIcone" class="modal-icone"></div>
+
+        <span id="animalModalTipo"></span>
+
+        <h2 id="animalModalTitulo"></h2>
+
+        <div id="animalModalTexto"></div>
+
+        <div class="investigacao-box">
+
+            <h3>🔬 Pergunta científica</h3>
+
+            <p id="animalPergunta"></p>
+
+            <button onclick="mostrarRespostaAnimal()">
+                Investigar
+            </button>
+
+            <div id="animalResposta"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
